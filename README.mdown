@@ -38,22 +38,7 @@ Takes an array of items and returns a new list of of items based upon a block yo
 	## OUTPUT
 	## ["Jason", "Mike", "Aaron"] ## would return the Person object really
 	
-	
-### Date
-Just added the ability to find differences between 2 dates
-
-#### days_between(start, finish)
-
-#### weeks_between(start, finish)
-
-#### months_between(start, finish)
-
-#### years_between(start, finish)
-
-FROM: http://rails.lighthouseapp.com/projects/8994/tickets/879-finding-the-days-weeks-months-years-between-two-dates
-
 ### Enumerable
-
 
 #### group_count
 Probably my favorite of all... You can take an array of items and it groups them by whatever block you pass in, and then returns a hash where the keys are what you were grouping on, and the value is the count of items in the group.
@@ -82,6 +67,19 @@ Just a clean way of displaying hash data
 	 cyclops: 1
 	   dingo: 1
 	
+### Date
+Just added the ability to find differences between 2 dates
+
+#### days_between(start, finish)
+
+#### weeks_between(start, finish)
+
+#### months_between(start, finish)
+
+#### years_between(start, finish)
+
+FROM: http://rails.lighthouseapp.com/projects/8994/tickets/879-finding-the-days-weeks-months-years-between-two-dates
+
 ### Histogram
 
 Often I need to see how the data patterns are going from one day to the next... How many emails were sent out between 1 & 2pm, or How many orders were done by hour this day. I find that looking at histograms really allows you to see how things are behaving and gives great insight into your data.
