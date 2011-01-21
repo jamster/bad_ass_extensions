@@ -10,7 +10,7 @@ class Hash
   end
   
   def rowized
-    max_key_length = largest_key.length
+    max_key_length = largest_key.to_s.length
     keys.map do |key|
       "#{key.to_s.rjust(max_key_length)}: #{self[key]}\n"
     end

@@ -90,8 +90,20 @@ From the sample output, you can see that on the last day, there was some spike i
 
 Just a useful tool in your arsenal of data mining.
 
-Checkout: [Forrst Post: http://forrst.com/posts/Histogram\_for\_Command\_Line\_IRB_usage-1Zn](http://forrst.com/posts/Histogram_for_Command_Line_IRB_usage-1Zn) for a display of usage
+Checkout: http://forrst.com/posts/Histogram\_for\_Command\_Line\_IRB\_usage-1Zn for a display of usage
 
+### RailsCookieDebugger
+
+	require 'rubygems'
+	require 'bad_ass_extensions'
+	cookie = "BAh7ByIQX2NzcmZfdG9rZW4iMWRDejZSMEw2cXcyMTBaWVhzRnZGSU92SFFGUHM1R2VrZUNTeHR4ODd5aUk9Ig9zZXNzaW9uX2lkIiU4ZWRlN2UwYWQ3NDhhMjVmNDUzNTYyYTRiY2MzMDc3Yw%3D%3D--05f7a04ebbe9fec2f70d8ad9faaddfedd7863912"
+	session = RailsCookieDebugger.show_session(cookie)
+	pp session
+
+	# Output
+	{"_csrf_token"=>"dCz6R0L6qw210ZYXsFvFIOvHQFPs5GekeCSxtx87yiI=",
+	 "session_id"=>"8ede7e0ad748a25f453562a4bcc3077c"}
+	
 
 ## Contributing to bad\_ass\_extensions
  
