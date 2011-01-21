@@ -2,6 +2,11 @@
 
 Bad Ass Extensions are a set of standard library extensions and tools I use on a regular basis.  
 
+== Installing
+
+	gem install bad_ass_extensions
+
+
 == Contributing to bad_ass_extensions
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
