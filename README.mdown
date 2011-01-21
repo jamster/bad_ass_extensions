@@ -1,0 +1,116 @@
+# bad\_ass\_extensions
+
+Bad Ass Extensions are a set of standard library extensions and tools I use on a regular basis.  
+
+## Installing
+
+	gem install bad_ass_extensions
+
+## Docs
+
+
+### Array
+
+#### sort\_by\_list
+A way of sorting a list by using a predetermined sort order of an attribute.  For instance, if you had a list of User objects, you can sort them by passing in a list of ordered attributes, such as 
+	
+	User.all.sort_by_list(["Boss", "Manager", "Worker", "Janitor"])
+	
+	
+#### frequency_list
+Takes an array of items and returns a list new array of how frequent those items are, for example:
+
+	> [1, 1, 3, 3, 4, 4, 4, 5].frequency_list
+
+	## OUTPUT
+	## [[1, 2], [3,2], [4,3], [5,1]]
+
+#### uniquify
+Takes an array of items and returns a new list of of items based upon a block you pass in, for example:
+
+	> people << Person.new(:first_name => "Jason", :career => "Superman")
+	> people << Person.new(:first_name => "Mike", :career => "Engineer")
+	> people << Person.new(:first_name => "Aaron", :career => "Dog Walker")
+	> people << Person.new(:first_name => "Joseph", :career => "Dog Walker")
+	> people << Person.new(:first_name => "Allen", :career => "Superman")
+	> people.uniquify{|p| p.career}
+
+	## OUTPUT
+	## ["Jason", "Mike", "Aaron"] ## would return the Person object really
+	
+	
+### Date
+Just added the ability to find differences between 2 dates
+
+#### days_between(start, finish)
+
+#### weeks_between(start, finish)
+
+#### months_between(start, finish)
+
+#### years_between(start, finish)
+
+FROM: http://rails.lighthouseapp.com/projects/8994/tickets/879-finding-the-days-weeks-months-years-between-two-dates
+
+### Enumerable
+
+
+#### group_count
+Probably my favorite of all... You can take an array of items and it groups them by whatever block you pass in, and then returns a hash where the keys are what you were grouping on, and the value is the count of items in the group.
+
+	> ['beholder', 'medusa', 'medusa', 'dog', 'dog', 'cat', 'person', 'dingo', 'bear', 'nharwal', 'nharwal', 'cyclops', 'dog'].group_count{|being| being }
+
+	## OUTPUT
+	## {"cat"=>1, "person"=>1, "medusa"=>2, "nharwal"=>2, "beholder"=>1, "dog"=>3, "bear"=>1, "dingo"=>1, "cyclops"=>1}
+
+### Hash
+
+#### rowized
+Just a clean way of displaying hash data
+
+	> hash = {"cat"=>1, "person"=>1, "medusa"=>2, "nharwal"=>2, "beholder"=>1, "dog"=>3, "bear"=>1, "dingo"=>1, "cyclops"=>1}
+	> puts hash.rowized
+	
+	## OUTPUT
+	     cat: 1
+	  person: 1
+	 nharwal: 2
+	  medusa: 2
+	beholder: 1
+	     dog: 3
+	    bear: 1
+	 cyclops: 1
+	   dingo: 1
+	
+### Histogram
+
+Often I need to see how the data patterns are going from one day to the next... How many emails were sent out between 1 & 2pm, or How many orders were done by hour this day. I find that looking at histograms really allows you to see how things are behaving and gives great insight into your data.
+
+This histogram class is just my simple attempt at getting data from a variety of different data structures (needs to be in some decent original form).
+
+From the sample output, you can see that on the last day, there was some spike in activity during the early afternoon (Hours 13 and 14).
+
+Just a useful tool in your arsenal of data mining.
+
+Checkout: [Forrst Post: http://forrst.com/posts/Histogram\_for\_Command\_Line\_IRB_usage-1Zn](http://forrst.com/posts/Histogram_for_Command_Line_IRB_usage-1Zn) for a display of usage
+
+
+## Contributing to bad\_ass\_extensions
+ 
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+## TODO
+
+needs some serious testing
+
+## Copyright
+
+Copyright (c) 2011 Jason Amster. See LICENSE.txt for
+further details.
+
