@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "bad_ass_extensions.gemspec",
     "lib/bad_ass_extensions.rb",
     "lib/bad_ass_extensions/array.rb",
     "lib/bad_ass_extensions/date.rb",
