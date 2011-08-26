@@ -5,27 +5,28 @@
 
 Gem::Specification.new do |s|
   s.name = %q{bad_ass_extensions}
-  s.version = "0.1.0"
+  s.version = "0.2.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jason Amster"]
-  s.date = %q{2011-01-21}
+  s.date = %q{2011-08-26}
   s.description = %q{Some bad ass extensions I use all the time}
   s.email = %q{jayamster@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.rdoc"
+    "README.mdown"
   ]
   s.files = [
     ".document",
     "Gemfile",
     "LICENSE.txt",
-    "README.rdoc",
+    "README.mdown",
     "Rakefile",
     "VERSION",
     "bad_ass_extensions.gemspec",
     "lib/bad_ass_extensions.rb",
     "lib/bad_ass_extensions/array.rb",
+    "lib/bad_ass_extensions/cookie_debugger.rb",
     "lib/bad_ass_extensions/date.rb",
     "lib/bad_ass_extensions/enumerable.rb",
     "lib/bad_ass_extensions/hash.rb",
@@ -37,7 +38,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/jamster/bad_ass_extensions}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.7}
+  s.rubygems_version = %q{1.6.2}
   s.summary = %q{Some bad ass extensions I use all the time}
   s.test_files = [
     "test/helper.rb",
@@ -45,7 +46,6 @@ Gem::Specification.new do |s|
   ]
 
   if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then

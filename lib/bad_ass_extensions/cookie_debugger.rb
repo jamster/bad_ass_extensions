@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'base64'
-require 'CGI'
+require 'CGI' rescue true
+require 'cgi' rescue true
 require 'pp'
 
 class RailsCookieDebugger

@@ -6,7 +6,7 @@ Dir.glob(File.expand_path(File.dirname(__FILE__))+'/bad_ass_extensions/*').each 
 end
 
 module BadAssExtensions
-  VERSION = '0.1.0'
+  VERSION = '0.2.1'
 end
 
 
