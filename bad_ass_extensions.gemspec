@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{bad_ass_extensions}
-  s.version = "0.2.1"
+  s.name = "bad_ass_extensions"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jason Amster"]
-  s.date = %q{2011-08-26}
-  s.description = %q{Some bad ass extensions I use all the time}
-  s.email = %q{jayamster@gmail.com}
+  s.date = "2012-06-07"
+  s.description = "Some bad ass extensions I use all the time"
+  s.email = "jayamster@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.mdown"
@@ -35,11 +35,11 @@ Gem::Specification.new do |s|
     "test/helper.rb",
     "test/test_bad_ass_extensions.rb"
   ]
-  s.homepage = %q{http://github.com/jamster/bad_ass_extensions}
+  s.homepage = "http://github.com/jamster/bad_ass_extensions"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.6.2}
-  s.summary = %q{Some bad ass extensions I use all the time}
+  s.rubygems_version = "1.8.21"
+  s.summary = "Some bad ass extensions I use all the time"
   s.test_files = [
     "test/helper.rb",
     "test/test_bad_ass_extensions.rb"
