@@ -13,6 +13,8 @@ class Histogram
     elsif data.is_a?(Hash)  && data[data.keys.first].is_a?(String) && data[data.keys.first].to_i.is_a?(Integer)
       puts "Hash of Integer String"
       @hash = data.inject({}){|hash, val| hash[val[0]] = val[1].to_i;hash}
+    elsif data.is_a?(Hash) && [Time, DateTime, Date].include?(data[data.keys.first].class)
+      @hash = Hash[data.map{|k, v| [k, v.to_i]}]
     else
       raise "Need to be throwing out an array of item, a hash where each val is an array or a hash where each val is an integer"
     end

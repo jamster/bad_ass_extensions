@@ -69,6 +69,11 @@ class Array
     end
   end
   
+  def map_with_index
+    self.each_with_index.map { |x, i| yield(x, i) }
+  end
+  
+  
   def uniquify(&block)
     items = []
     comparables = self.map{|item| block.call(item)}

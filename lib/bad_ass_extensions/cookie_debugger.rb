@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'base64'
-require 'CGI' rescue true
+# require 'CGI' rescue true
 require 'cgi' rescue true
 require 'pp'
 
